@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+color:black !important;
+}
+.app .bg{
+  background-image: url(../src/img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+ .bg::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.348);
+}
+.navbar{
+  background-color: rgb(0, 0, 0);
+}
+.searchInp::after{
+  content: "Search";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(#e66465, #9198e5);
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 15px;
+  justify-content: center;
+  border-radius: 0 26px 26px 0;
+  cursor: pointer;
+  -webkit-border-radius: 0 26px 26px 0;
+  -moz-border-radius: 0 26px 26px 0;
+  -ms-border-radius: 0 26px 26px 0;
+  -o-border-radius: 0 26px 26px 0;
+}
+.bg-carousel .carousel-slider{
+  height: 100%;
+}
+.bg-carousel .slider-wrapper {
+  height: 100%;
+}
+.bg-carousel .slider-wrapper .slider.animated{
+  height: 100%;
+}
+.bg-carousel .movie-img::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+.header{
+  background-image:url(../header.jpg) ;
+  background-size: cover;
+  background-position: center;
+}
+.Trending .control-dots{
+  display: none;
+}
+@media (min-width:768px){
+  .Trending .carousel .slide{
+    min-width: calc(100% / 3) !important;
+  }
+}
+@media (min-width:992px){
+  .Trending .carousel .slide{
+    min-width: calc(100% / 4) !important;
+  }
+}
+@media (min-width:1199px){
+  .Trending .carousel .slide{
+    min-width: calc(100% / 5) !important;
+  }
+}
+.Trending .btns{
+  background-color: #fff;
+  border: 1px solid black; 
+  border-radius:26px ;
+  -webkit-border-radius:26px ;
+  -moz-border-radius:26px ;
+  -ms-border-radius:26px ;
+  -o-border-radius:26px ;
+  -webkit-border-radius:26px ;
+}
+.Trending .btns button{
+  padding: 5px 20px;
+  border-radius:26px ;
+}
+.Trending .btns button.active{
+  background: linear-gradient(to right,#c0fecf 0,#1ed5a9 100%);
+
+}
+.Trending .carousel .slide{
+  min-width: calc(100% / 2) ;
+}
+.Trending .carousel .slide img{
+  object-fit: cover;
+}
+.card .box:hover .card-text{
+  display: flex;
+
+  background-color: rgba(0, 0, 0, 0.397)
+  
+}
+.SearchCard{
+  box-shadow: 0px 0px 15px -5px #fff;
+}
+.SingleMovie,
+.SingleTv{
+  background-image: url(../singlebg.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  min-height: 100vh ;
+}
+.SingleMovie::before,
+.SingleTv::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.632);
+}
